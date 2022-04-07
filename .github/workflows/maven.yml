@@ -43,4 +43,8 @@ jobs:
         dockerfile: Dockerfile
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
+    - name: Docker pull 
+      run: |
+        docker ps -a 
+        docker images
       
