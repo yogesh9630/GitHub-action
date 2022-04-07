@@ -36,7 +36,7 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
         
     - name: Analyze with SonarCloud
-      run: ./mvnw -B verify sonar:sonar -Dsonar.projectKey=Github-action -Dsonar.organization=yogesh9630 -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN
+      run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=Github-action
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
