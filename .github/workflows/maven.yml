@@ -23,7 +23,8 @@ jobs:
         distribution: 'adopt'
         cache: maven
     - name: Ip check
-      run: ip addr show
+      run: ifconfig
+      
     - name: Build with Maven
       run: mvn clean install
       
