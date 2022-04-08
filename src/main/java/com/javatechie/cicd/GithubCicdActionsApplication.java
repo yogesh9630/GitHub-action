@@ -21,6 +21,7 @@ public class GithubCicdActionsApplication {
 //	git branch -M main
 //	git remote add origin https://github.com/Java-Techie-jt/github-actions-example.git
 //	git push -u origin main
+	//
 	public static void main(String[] args) {
 		SpringApplication.run(GithubCicdActionsApplication.class, args);
 	}
